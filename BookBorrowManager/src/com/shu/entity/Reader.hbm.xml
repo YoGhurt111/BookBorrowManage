@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.shu.entity.Reader" table="reader" schema="book_borrow">
+        <id name="readerid">
+            <column name="readerid" sql-type="char(8)" length="8"/>
+        </id>
+        <property name="type">
+            <column name="type" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="name">
+            <column name="name" sql-type="char(20)" length="20" not-null="true"/>
+        </property>
+        <property name="age">
+            <column name="age" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="sex">
+            <column name="sex" sql-type="char(4)" length="4" not-null="true"/>
+        </property>
+        <property name="phone">
+            <column name="phone" sql-type="char(11)" length="11" not-null="true"/>
+        </property>
+        <property name="dept">
+            <column name="dept" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="regdate">
+            <column name="regdate" sql-type="date" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

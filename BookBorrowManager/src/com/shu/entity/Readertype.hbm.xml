@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.shu.entity.Readertype" table="readertype" schema="book_borrow">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="typename">
+            <column name="typename" sql-type="varchar(20)" length="20" not-null="true"/>
+        </property>
+        <property name="maxborrownum">
+            <column name="maxborrownum" sql-type="int(11)" not-null="true"/>
+        </property>
+        <property name="limitday">
+            <column name="limitday" sql-type="int(11)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

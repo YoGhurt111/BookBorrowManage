@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - library@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="2.6">
+    <schema id="1" name="library">
+      <visible>1</visible>
+    </schema>
+    <schema id="2" name="authdemo"/>
+    <schema id="3" name="information_schema"/>
+    <schema id="4" name="mysql"/>
+    <schema id="5" name="performance_schema"/>
+    <schema id="6" name="school"/>
+    <schema id="7" name="sys"/>
+    <table id="8" parent="1" name="book"/>
+    <table id="9" parent="1" name="bookborrow"/>
+    <table id="10" parent="1" name="booktype"/>
+    <table id="11" parent="1" name="reader"/>
+    <table id="12" parent="1" name="readertype"/>
+    <table id="13" parent="1" name="user"/>
+    <column id="14" parent="8" name="ISBN">
+      <mandatory>1</mandatory>
+      <data-type>char(10)|0</data-type>
+    </column>
+    <column id="15" parent="8" name="typeId">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="16" parent="8" name="bookName">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="17" parent="8" name="author">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="18" parent="8" name="publish">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="19" parent="8" name="publishDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="20" parent="8" name="printTime">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="21" parent="8" name="unitPrice">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="22" parent="8" name="PRIMARY">
+      <columns>ISBN</columns>
+      <primary>1</primary>
+    </key>
+    <column id="23" parent="9" name="readerId">
+      <mandatory>1</mandatory>
+      <data-type>char(10)|0</data-type>
+    </column>
+    <column id="24" parent="9" name="bookId">
+      <mandatory>1</mandatory>
+      <data-type>char(10)|0</data-type>
+    </column>
+    <column id="25" parent="9" name="borrowDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="26" parent="9" name="returnDate">
+      <data-type>date|0</data-type>
+    </column>
+    <column id="27" parent="9" name="fine">
+      <data-type>double|0</data-type>
+    </column>
+    <key id="28" parent="9" name="PRIMARY">
+      <columns>readerId
+bookId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="29" parent="10" name="typeID">
+      <mandatory>1</mandatory>
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="30" parent="10" name="typeName">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="31" parent="10" name="PRIMARY">
+      <columns>typeID</columns>
+      <primary>1</primary>
+    </key>
+    <column id="32" parent="11" name="readerId">
+      <mandatory>1</mandatory>
+      <data-type>char(10)|0</data-type>
+    </column>
+    <column id="33" parent="11" name="readerTypeId">
+      <data-type>char(5)|0</data-type>
+    </column>
+    <column id="34" parent="11" name="name">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="35" parent="11" name="age">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="36" parent="11" name="sex">
+      <data-type>char(2)|0</data-type>
+    </column>
+    <column id="37" parent="11" name="phoneNumber">
+      <data-type>char(11)|0</data-type>
+    </column>
+    <column id="38" parent="11" name="department">
+      <data-type>varchar(30)|0</data-type>
+    </column>
+    <column id="39" parent="11" name="registerDate">
+      <data-type>date|0</data-type>
+    </column>
+    <key id="40" parent="11" name="PRIMARY">
+      <columns>readerId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="41" parent="12" name="readerTypeId">
+      <mandatory>1</mandatory>
+      <data-type>char(5)|0</data-type>
+    </column>
+    <column id="42" parent="12" name="readerTypeName">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="43" parent="12" name="maxBorrowNum">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <column id="44" parent="12" name="limit">
+      <data-type>int(11)|0</data-type>
+    </column>
+    <key id="45" parent="12" name="PRIMARY">
+      <columns>readerTypeId</columns>
+      <primary>1</primary>
+    </key>
+    <column id="46" parent="13" name="userId">
+      <mandatory>1</mandatory>
+      <data-type>char(10)|0</data-type>
+    </column>
+    <column id="47" parent="13" name="userName">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <column id="48" parent="13" name="password">
+      <data-type>varchar(20)|0</data-type>
+    </column>
+    <key id="49" parent="13" name="PRIMARY">
+      <columns>userId</columns>
+      <primary>1</primary>
+    </key>
+  </database-model>
+</dataSource>
